@@ -28,7 +28,7 @@
 <br />
 
 
-  <h3 align="center">We are developing a software capable of identifying microlensing events detected with Gaia telescope and deriving the properties of lensing objects that cause them</h3>
+  <h3 align="center">We are developing software capable of identifying microlensing events detected with Gaia telescope and deriving the properties of lensing objects that cause them</h3>
 
   <p align="center">
     <br />
@@ -109,9 +109,9 @@ contaminants, i.e. interpreted as microlensing events.
 ### Prerequisites
 
 * Python 3
-* [astropy]([https://healpy.readthedocs.io/en/latest/](https://www.astropy.org/)
-* [astromet]([https://healpix.jpl.nasa.gov/](https://github.com/zpenoyre/astromet.py)
-* [scanning law]([https://healpix.jpl.nasa.gov/](https://github.com/gaiaverse/scanninglaw)
+* [astropy](https://www.astropy.org/)
+* [astromet](https://github.com/zpenoyre/astromet.py)
+* [scanning law](https://github.com/gaiaverse/scanninglaw)
 
 ### Installation
 
@@ -140,16 +140,10 @@ contaminants, i.e. interpreted as microlensing events.
 ### Basic steps
 
 What does the code do:
-* By default it calculates $F$ for $\theta \in [0,180^\circ]$ and $\phi \in [0,360^\circ]$, saves the values of $\theta$, $\phi$, $F$ to a .txt file and plots a Matplotlib contour of $F$
-* Script outflow_parameters.py:
-  * Script with paths (for output and input directories) and relevant parameters (for plotting and calculations)
-* Script outflow.py:
-  * Script for running the code and calculating the normalized mass flux
-* Script outflow_plot.py:
-  * Script for plotting the data: either a HEALPix map or a Matplotlib contour plot
-* User can specify arbitrary values of $\theta$ and $\phi$:
-  * Set specific_value = True in the outflow_parameters.py file
-  * Change parameters theta_specific, phi_specific in the outflow_parameters.py file
+* Generates Gaia mock observations for a range of single-source parameters (RA, DEC, pmra, pmdec, parallax) and saves them to .parquet files.
+* Generates Gaia mock observations for a range of microlensing parameters (RA, DEC, pmra, pmdec, parallax, u0, thetaE, t0, tE, piEE, piEN) and saves them to .parquet files.
+* Generates Gaia mock observations for a range of binary parameters (RA, DEC, pmra, pmdec, parallax, period, a, e, q, l, tperi, v_phi, v_omega, v_theta) and saves them to .parquet files.
+
      
 
 ### Running the code
