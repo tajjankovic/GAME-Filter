@@ -109,9 +109,9 @@ contaminants, i.e. interpreted as microlensing events.
 ### Prerequisites
 
 * Python 3
-* [astropy]([https://healpy.readthedocs.io/en/latest/](https://www.astropy.org/))
-* [astromet]([https://healpix.jpl.nasa.gov/](https://github.com/zpenoyre/astromet.py))
-* [scanning law]([https://healpix.jpl.nasa.gov/](https://github.com/gaiaverse/scanninglaw))
+* [astropy]([https://healpy.readthedocs.io/en/latest/](https://www.astropy.org/)
+* [astromet]([https://healpix.jpl.nasa.gov/](https://github.com/zpenoyre/astromet.py)
+* [scanning law]([https://healpix.jpl.nasa.gov/](https://github.com/gaiaverse/scanninglaw)
 
 ### Installation
 
@@ -207,7 +207,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 Taj Jankovič - taj.jankovic@ung.si
 
-Project Link: [https://github.com/tajjankovic/Spin-induced-offset-stream-self-crossing-shocks-in-TDEs](https://github.com/tajjankovic/Spin-induced-offset-stream-self-crossing-shocks-in-TDEs)
+Project Link: [[https://github.com/tajjankovic/Spin-induced-offset-stream-self-crossing-shocks-in-TDEs](https://github.com/tajjankovic/GAME-Filter)]
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
