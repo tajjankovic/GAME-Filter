@@ -201,7 +201,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 Taj Jankovič - taj.jankovic@ung.si
 
-Project Link: [[https://github.com/tajjankovic/Spin-induced-offset-stream-self-crossing-shocks-in-TDEs](https://github.com/tajjankovic/GAME-Filter)]
+Project Link: [[https://github.com/tajjankovic/GAME-Filter](https://github.com/tajjankovic/GAME-Filter)]
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
