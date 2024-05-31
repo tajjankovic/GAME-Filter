@@ -1,7 +1,5 @@
 # GAME-Filter
 
-
-
 <div id="top"></div>
 <!--
 *** README template is from: https://github.com/othneildrew/Best-README-Template
@@ -28,24 +26,18 @@
 
 <!-- PROJECT LOGO -->
 <br />
-<div align="center">
-  <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="Figures/dz1.2_rho_phys_no_colorbar.png" alt="Logo" width="250" height="250">
-       <img src="Figures/normalized_healpix_map_of_F_dz=1.20_nside=64_same_limits_lmaxsmooth=40_smooth_fwhm=0.05_symm.png" alt="Logo" width="475" height="250">
 
-  </a>
 
-  <h3 align="center">A software capable of identifying microlensing events detected with Gaia telescope and deriving the properties of lensing objects that cause them</h3>
+  <h3 align="center">We are developing a software capable of identifying microlensing events detected with Gaia telescope and deriving the properties of lensing objects that cause them</h3>
 
   <p align="center">
-    Calculate the outflow from the self-crossing shock like never before!
     <br />
      <!-- <a href="https://github.com/othneildrew/Best-README-Template"><strong>Explore the docs »</strong></a>  -->
     <br />
     <br />
    <!-- <a href="https://github.com/othneildrew/Best-README-Template">View Demo</a>  -->
 
-[Report a bug](https://github.com/tajjankovic/Spin-induced-offset-stream-self-crossing-shocks-in-TDEs/issues).
+[Report a bug](https://github.com/tajjankovic/GAME-Filter/issues).
 
   
  <!--   <a href="issues">Request Feature</a>  -->
@@ -85,10 +77,18 @@
 
 <!-- [![Product Name Screen Shot][product-screenshot]](https://example.com)  -->
 
-<!--  In recent years, there have been several studies related to numerical simulations of TDEs ([[1]](#1), [[2]](#2), [[3]](#3), [[4]](#4), [[5]](#5), [[6]](#6)).  -->
-<p align="justify"> After a star is disrupted, the part of the elongated stream of debris that passed the pericenter collides with the still-infalling gas due to the relativistic apsidal precession, leading to a self-crossing shock. For rotating black holes the relativistic Lense-Thirring precession causes a misalignment between the colliding streams. We study the impact of the black hole's spin on the outflow from the self-crossing shock by locally simulating the collision between two streams with widths $H$ offset by a distance $\Delta z$.
+<!--  The Gaia mission's contribution to astrometry provides an unprecedented opportunity to
+observe microlensing events. While photometric detection has its merits, we focus on the
+identification of events through astrometric data. The aim is to leverage the astrometric
+precision of Gaia to develop GAME Filter, a software capable of identifying such
+microlensing events and to derive the properties of lensing objects that cause them.
 
-<p align="justify"> We have simulated 19 stream collisions corresponding to values of the offset $\Delta z \in [0, 1.8H]$, with an increment of $0.1H$, and calculated the outflow rate in terms of the polar angle $\theta$ and azimuthal angle $\phi$. This code uses results from our simulations to calculate the normalized mass flux $F$ (normalized by the total outflow rate) along the direction and for $\Delta z$ specified by the user. For values of $\Delta z$ that we have not simulated a stream collision, we implement linear interpolation. More details are available in <a href="https://arxiv.org/abs/2303.16230">Jankovič et al. (2023)</a> and movies can also be found  <a href="https://www.youtube.com/@tajjankovic/featured">here</a>.
+
+<p align="justify"> We have established a range and distributions of source and lens parameters and used
+them to generate mock Gaia observations of microlensing events. Additionally, we have established a range and distributions of stellar binary system parameters and
+used them to generate mock Gaia observations of binary events, which could potentially be
+contaminants, i.e. interpreted as microlensing events.
+
 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
