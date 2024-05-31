@@ -109,22 +109,23 @@ contaminants, i.e. interpreted as microlensing events.
 ### Prerequisites
 
 * Python 3
-* [healpy](https://healpy.readthedocs.io/en/latest/)
-* [HEALPix](https://healpix.jpl.nasa.gov/)
+* [astropy]([https://healpy.readthedocs.io/en/latest/](https://www.astropy.org/))
+* [astromet]([https://healpix.jpl.nasa.gov/](https://github.com/zpenoyre/astromet.py))
+* [scanning law]([https://healpix.jpl.nasa.gov/](https://github.com/gaiaverse/scanninglaw))
 
 ### Installation
 
 
 
-1. Download and extract the .zip of the repository
+1. Download the Jupypter Notebook file
  
 2. Install Python packages
    
-<!-- * Instructions for installation on macOS Monterey 12:-->
+<!-- * Instructions for installation on macOS Monterey 12:
    ```sh
    pip3 install matplotlib, pandas, healpy, pygeos, basemap
 
-   ```
+   ```-->
 <!-- * Instructions for installation on Ubuntu 20.04:-->
 <!-- * Instructions for installation on Windows 10:-->
 
