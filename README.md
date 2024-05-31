@@ -81,7 +81,7 @@
 observe microlensing events. While photometric detection has its merits, we focus on the
 identification of events through astrometric data. The aim is to leverage the astrometric
 precision of Gaia to develop GAME Filter, a software capable of identifying such
-microlensing events and to derive the properties of lensing objects that cause them.
+microlensing events and to derive the properties of lensing objects that cause them. -->
 
 
 <p align="justify"> We have established a range and distributions of source and lens parameters and used
