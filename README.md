@@ -145,14 +145,14 @@ What does the code do:
 * Generates Gaia mock observations for a range of binary parameters (RA, DEC, pmra, pmdec, parallax, period, a, e, q, l, tperi, v_phi, v_omega, v_theta) and saves them to .parquet files.
 
      
-
+<!--
 ### Running the code
 
 * E.g. from the command line for $\Delta z=0.6$ and 1.2:
    ```sh
    python3.8 outflow.py --dz_list 0.6 1.2
    ```
-
+-->
 
 
 
