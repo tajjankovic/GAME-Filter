@@ -28,8 +28,9 @@
 <br />
 
 
-  <h3 align="center">We are developing software capable of identifying microlensing events detected with Gaia telescope and deriving the properties of lensing objects that cause them (current collaborators: Taj Jankovič, Andreja Gomboc, Uroš Kostić; former collaborators: Martina Larma, Mile Karlica)</h3>
-
+  <h3 align="center">We are developing software capable of identifying microlensing events detected with Gaia telescope and deriving the properties of lensing objects that cause them</h3>
+<p align="left">Current collaborators: Taj Jankovič, Andreja Gomboc, Uroš Kostić</p>
+<p align="left">Former collaborators: Martina Larma, Mile Karlica</p>
   <p align="center">
     <br />
      <!-- <a href="https://github.com/othneildrew/Best-README-Template"><strong>Explore the docs »</strong></a>  -->
