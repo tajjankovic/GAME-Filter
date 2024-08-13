@@ -140,12 +140,12 @@ microlensing events and to derive the properties of lensing objects that cause t
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-### Simulator (mock data; see <a href="https://github.com/tajjankovic/GAME-Filter/tree/main/Simulator_code">Simulator_code</a>))
+### Simulator (mock data; see <a href="https://github.com/tajjankovic/GAME-Filter/tree/main/Simulator_code">Simulator_code</a>)
 * Generates Gaia mock observations for a range of single-source parameters (RA, DEC, pmra, pmdec, parallax) and saves them to .parquet files.
 * Generates Gaia mock observations for a range of microlensing parameters (RA, DEC, pmra, pmdec, parallax, u0, thetaE, t0, tE, piEE, piEN) and saves them to .parquet files.
 * Generates Gaia mock observations for a range of binary parameters (RA, DEC, pmra, pmdec, parallax, period, a, e, q, l, tperi, v_phi, v_omega, v_theta) and saves them to .parquet files.
 
-### GAME Filter (minimizer; see <a href="https://github.com/tajjankovic/GAME-Filter/tree/main/Minimizer_code">Minimizer_code</a>))
+### GAME Filter (minimizer; see <a href="https://github.com/tajjankovic/GAME-Filter/tree/main/Minimizer_code">Minimizer_code</a>)
 
 GAME Filter (see <a href="https://github.com/tajjankovic/GAME-Filter/tree/main/Minimizer_code">Minimizer_code</a>) is a software tool developed to identify microlensing events in the <i>Gaia</i> dataset and derive the properties of the lensing objects. The software reads <code>x<sub>obs</sub></code>, <code>x<sub>err</sub></code>, <code>&#916;x<sub>obs</sub></code>, <code>t<sub>obs</sub></code>, and <code>&#966;<sub>obs</sub></code> from the <i>Gaia</i> data files. GAME Filter calculates <code>x<sub>fit</sub></code>, the deviation along <code>&#966;<sub>obs</sub></code> at <code>t<sub>obs</sub></code>, for specific single source and microlensing parameters. The software then minimizes a scalar parameter
 </p>
