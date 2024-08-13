@@ -86,13 +86,13 @@ microlensing events and to derive the properties of lensing objects that cause t
 
 
 <p align="justify"> We have established a range and distributions of source and lens parameters and used
-them to generate mock Gaia observations of microlensing events. Additionally, we have established a range and distributions of stellar binary system parameters and
+them to generate mock Gaia observations of microlensing events (see Simulator_code). Additionally, we have established a range and distributions of stellar binary system parameters and
 used them to generate mock Gaia observations of binary events, which could potentially be
 contaminants, i.e. interpreted as microlensing events.
 
 
 <p>
-    <a href="https://github.com/tajjankovic/GAME-Filter/">GAME Filter</a> is a software tool developed to identify microlensing events in the <i>Gaia</i> dataset and derive the properties of the lensing objects. The software reads <code>x<sub>obs</sub></code>, <code>x<sub>err</sub></code>, <code>&#916;x<sub>obs</sub></code>, <code>t<sub>obs</sub></code>, and <code>&#966;<sub>obs</sub></code> from the <i>Gaia</i> data files. GAME Filter calculates <code>x<sub>fit</sub></code>, the deviation along <code>&#966;<sub>obs</sub></code> at <code>t<sub>obs</sub></code>, for specific single source and microlensing parameters. The software then minimizes a scalar parameter
+    GAME Filter is a software tool developed to identify microlensing events in the <i>Gaia</i> dataset and derive the properties of the lensing objects. The software reads <code>x<sub>obs</sub></code>, <code>x<sub>err</sub></code>, <code>&#916;x<sub>obs</sub></code>, <code>t<sub>obs</sub></code>, and <code>&#966;<sub>obs</sub></code> from the <i>Gaia</i> data files. GAME Filter calculates <code>x<sub>fit</sub></code>, the deviation along <code>&#966;<sub>obs</sub></code> at <code>t<sub>obs</sub></code>, for specific single source and microlensing parameters. The software then minimizes a scalar parameter
 </p>
 <p>
     <code>
@@ -100,10 +100,10 @@ contaminants, i.e. interpreted as microlensing events.
     </code>
 </p>
 <p>
-    which indicates the goodness of the microlensing fit. <code>N</code> corresponds to the number of observations for a specific event. The minimization process utilizes the Limited-memory Broyden-Fletcher-Goldfarb-Shanno<a href="#fn1"><sup>1</sup></a> algorithm (L-BFGS-B) to explore the parameter space and determine the optimal single source and microlensing parameters for individual events. A more detailed description of the minimization process is provided in Appendix <a href="#app_game_filter">Appendix</a>.
+    which indicates the goodness of the microlensing fit. <code>N</code> corresponds to the number of observations for a specific event. The minimization process utilizes the Limited-memory Broyden-Fletcher-Goldfarb-Shanno<a href="#fn1"><sup>1</sup></a> algorithm (L-BFGS-B) to explore the parameter space and determine the optimal single source and microlensing parameters for individual events.
 </p>
 <p>
-    Following the minimization process, the minimizer might stop in an incorrect local minimum, failing to find the correct solution. Consequently, we establish criteria to determine when an event is recovered. These criteria are based on the value of MUWE after minimization <code>MUWE<sub>min</sub></code>, L2 optimality error <code>L<sub>opt</sub></code> (see <a href="#app_game_filter">Appendix</a>), initial guesses, and the boundaries imposed on individual parameters. We consider an event as recovered if the following criteria are met:
+    Following the minimization process, the minimizer might stop in an incorrect local minimum, failing to find the correct solution. Consequently, we establish criteria to determine when an event is recovered. These criteria are based on the value of MUWE after minimization <code>MUWE<sub>min</sub></code>, L2 optimality error <code>L<sub>opt</sub></code>, initial guesses, and the boundaries imposed on individual parameters. We consider an event as recovered if the following criteria are met:
 </p>
 <ul>
     <li>0.9 &lt; <code>MUWE<sub>min</sub></code> &lt; 1.1.</li>
