@@ -91,6 +91,31 @@ used them to generate mock Gaia observations of binary events, which could poten
 contaminants, i.e. interpreted as microlensing events.
 
 
+<p>
+    <a href="https://github.com/tajjankovic/GAME-Filter/">GAME Filter</a> is a software tool developed to identify microlensing events in the <i>Gaia</i> dataset and derive the properties of the lensing objects. The software reads <code>x<sub>obs</sub></code>, <code>x<sub>err</sub></code>, <code>&#916;x<sub>obs</sub></code>, <code>t<sub>obs</sub></code>, and <code>&#966;<sub>obs</sub></code> from the <i>Gaia</i> data files. GAME Filter calculates <code>x<sub>fit</sub></code>, the deviation along <code>&#966;<sub>obs</sub></code> at <code>t<sub>obs</sub></code>, for specific single source and microlensing parameters. The software then minimizes a scalar parameter
+</p>
+<p>
+    <code>
+        MUWE = &#40; &Sigma;<sub>i=1</sub><sup>N</sup> &#40;x<sub>obs,i</sub> - x<sub>fit,i</sub>&#41;<sup>2</sup> / x<sub>err,i</sub><sup>2</sup> &#41;<sup>1/2</sup>,
+    </code>
+</p>
+<p>
+    which indicates the goodness of the microlensing fit. <code>N</code> corresponds to the number of observations for a specific event. The minimization process utilizes the Limited-memory Broyden-Fletcher-Goldfarb-Shanno<a href="#fn1"><sup>1</sup></a> algorithm (L-BFGS-B) to explore the parameter space and determine the optimal single source and microlensing parameters for individual events. A more detailed description of the minimization process is provided in Appendix <a href="#app_game_filter">Appendix</a>.
+</p>
+<p>
+    Following the minimization process, the minimizer might stop in an incorrect local minimum, failing to find the correct solution. Consequently, we establish criteria to determine when an event is recovered. These criteria are based on the value of MUWE after minimization <code>MUWE<sub>min</sub></code>, L2 optimality error <code>L<sub>opt</sub></code> (see <a href="#app_game_filter">Appendix</a>), initial guesses, and the boundaries imposed on individual parameters. We consider an event as recovered if the following criteria are met:
+</p>
+<ul>
+    <li>0.9 &lt; <code>MUWE<sub>min</sub></code> &lt; 1.1.</li>
+    <li><code>L<sub>opt</sub></code> &lt; 0.015<a href="#fn2"><sup>2</sup></a>.</li>
+    <li>The values of <code>&#960;<sub>EE</sub></code>, <code>&#960;<sub>EN</sub></code>, and <code>u<sub>0</sub></code> differ from the initial guesses.</li>
+    <li>The values of all parameters are within the imposed boundaries.</li>
+</ul>
+
+<p id="fn1"><sup>1</sup> We tested several minimization methods and found that the L-BFGS-B method produces the most accurate results. This is mainly due to its feature of constraining individual parameters within bounds.</p>
+
+<p id="fn2"><sup>2</sup> We determine the critical value <code>L<sub>opt</sub> = 0.015</code> from <code>L<sub>opt</sub></code> histograms as the value where histograms show a sharp decline.</p>
+
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
