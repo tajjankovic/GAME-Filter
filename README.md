@@ -85,33 +85,10 @@ precision of Gaia to develop GAME Filter, a software capable of identifying such
 microlensing events and to derive the properties of lensing objects that cause them. 
 
 
-<p align="justify"> We have established a range and distributions of source and lens parameters and used
-them to generate mock Gaia observations of microlensing events (see <a href="https://github.com/tajjankovic/GAME-Filter/tree/main/Simulator_code">Simulator_code</a>). Additionally, we have established a range and distributions of stellar binary system parameters and
-used them to generate mock Gaia observations of binary events, which could potentially be
-contaminants, i.e. interpreted as microlensing events.
 
 
 <p>
-    GAME Filter (see <a href="https://github.com/tajjankovic/GAME-Filter/tree/main/Minimizer_code">Minimizer_code</a>) is a software tool developed to identify microlensing events in the <i>Gaia</i> dataset and derive the properties of the lensing objects. The software reads <code>x<sub>obs</sub></code>, <code>x<sub>err</sub></code>, <code>&#916;x<sub>obs</sub></code>, <code>t<sub>obs</sub></code>, and <code>&#966;<sub>obs</sub></code> from the <i>Gaia</i> data files. GAME Filter calculates <code>x<sub>fit</sub></code>, the deviation along <code>&#966;<sub>obs</sub></code> at <code>t<sub>obs</sub></code>, for specific single source and microlensing parameters. The software then minimizes a scalar parameter
-</p>
-<p>
-    <code>
-        MUWE = &#40; &Sigma;<sub>i=1</sub><sup>N</sup> &#40;x<sub>obs,i</sub> - x<sub>fit,i</sub>&#41;<sup>2</sup> / x<sub>err,i</sub><sup>2</sup> &#41;<sup>1/2</sup>,
-    </code>
-</p>
-<p>
-    which indicates the goodness of the microlensing fit. <code>N</code> corresponds to the number of observations for a specific event. The minimization process utilizes the Limited-memory Broyden-Fletcher-Goldfarb-Shanno algorithm (L-BFGS-B) to explore the parameter space and determine the optimal single source and microlensing parameters for individual events.
-</p>
-<p>
-    Following the minimization process, the minimizer might stop in an incorrect local minimum, failing to find the correct solution. Consequently, we establish criteria to determine when an event is recovered. These criteria are based on the value of MUWE after minimization <code>MUWE<sub>min</sub></code>, L2 optimality error <code>L<sub>opt</sub></code>, initial guesses, and the boundaries imposed on individual parameters. We consider an event as recovered if the following criteria are met:
-</p>
-<ul>
-    <li>0.9 &lt; <code>MUWE<sub>min</sub></code> &lt; 1.1.</li>
-    <li><code>L<sub>opt</sub></code> &lt; 0.015.</li>
-    <li>The values of <code>&#960;<sub>EE</sub></code>, <code>&#960;<sub>EN</sub></code>, and <code>u<sub>0</sub></code> differ from the initial guesses.</li>
-    <li>The values of all parameters are within the imposed boundaries.</li>
-</ul>
-
+    
 
 
 
@@ -136,6 +113,7 @@ contaminants, i.e. interpreted as microlensing events.
 * Python 3
 * [astropy](https://www.astropy.org/)
 * [astromet](https://github.com/zpenoyre/astromet.py)
+* [jaxtromet](https://github.com/maja-jablonska/jaxtromet.py)
 * [scanning law](https://github.com/gaiaverse/scanninglaw)
 
 ### Installation
@@ -164,12 +142,31 @@ contaminants, i.e. interpreted as microlensing events.
 
 ### Basic steps
 
-What does the code do:
+What does the Simulator code do:
 * Generates Gaia mock observations for a range of single-source parameters (RA, DEC, pmra, pmdec, parallax) and saves them to .parquet files.
 * Generates Gaia mock observations for a range of microlensing parameters (RA, DEC, pmra, pmdec, parallax, u0, thetaE, t0, tE, piEE, piEN) and saves them to .parquet files.
 * Generates Gaia mock observations for a range of binary parameters (RA, DEC, pmra, pmdec, parallax, period, a, e, q, l, tperi, v_phi, v_omega, v_theta) and saves them to .parquet files.
 
-     
+What does the Minimizer code do:
+GAME Filter (see <a href="https://github.com/tajjankovic/GAME-Filter/tree/main/Minimizer_code">Minimizer_code</a>) is a software tool developed to identify microlensing events in the <i>Gaia</i> dataset and derive the properties of the lensing objects. The software reads <code>x<sub>obs</sub></code>, <code>x<sub>err</sub></code>, <code>&#916;x<sub>obs</sub></code>, <code>t<sub>obs</sub></code>, and <code>&#966;<sub>obs</sub></code> from the <i>Gaia</i> data files. GAME Filter calculates <code>x<sub>fit</sub></code>, the deviation along <code>&#966;<sub>obs</sub></code> at <code>t<sub>obs</sub></code>, for specific single source and microlensing parameters. The software then minimizes a scalar parameter
+</p>
+<p>
+    <code>
+        MUWE = &#40; &Sigma;<sub>i=1</sub><sup>N</sup> &#40;x<sub>obs,i</sub> - x<sub>fit,i</sub>&#41;<sup>2</sup> / x<sub>err,i</sub><sup>2</sup> &#41;<sup>1/2</sup>,
+    </code>
+</p>
+<p>
+    which indicates the goodness of the microlensing fit. <code>N</code> corresponds to the number of observations for a specific event. The minimization process utilizes the Limited-memory Broyden-Fletcher-Goldfarb-Shanno algorithm (L-BFGS-B) to explore the parameter space and determine the optimal single source and microlensing parameters for individual events.
+</p>
+<p>
+    Following the minimization process, the minimizer might stop in an incorrect local minimum, failing to find the correct solution. Consequently, we establish criteria to determine when an event is recovered. These criteria are based on the value of MUWE after minimization <code>MUWE<sub>min</sub></code>, L2 optimality error <code>L<sub>opt</sub></code>, initial guesses, and the boundaries imposed on individual parameters. We consider an event as recovered if the following criteria are met:
+</p>
+<ul>
+    <li>0.9 &lt; <code>MUWE<sub>min</sub></code> &lt; 1.1.</li>
+    <li><code>L<sub>opt</sub></code> &lt; 0.015.</li>
+    <li>The values of <code>&#960;<sub>EE</sub></code>, <code>&#960;<sub>EN</sub></code>, and <code>u<sub>0</sub></code> differ from the initial guesses.</li>
+    <li>The values of all parameters are within the imposed boundaries.</li>
+</ul>
 <!--
 ### Running the code
 
