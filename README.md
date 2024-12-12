@@ -29,8 +29,7 @@
 
 
   <h3 align="center">Software capable of identifying microlensing events detected with Gaia telescope and deriving the properties of lensing objects that cause them</h3>
-<p align="left">Current collaborators: <a href="https://www2.ung.si/~tj0014/">Taj Jankovič</a>, <a href="https://www2.ung.si/~agomboc/ag/About_Me.html">Andreja Gomboc</a>, <a href="https://wyrzykow.wixsite.com/lukasz">Łukasz Wyrzykowsk </a>, Uroš Kostić, <a href="https://www2.ung.si/~tpetrushevska/">Tanja Petrushevska</a>, Mateusz Bronikowski  </p>
-<p align="left">Former collaborators: Martina Larma, Mile Karlica</p>
+<p align="left">Collaborators: <a href="https://www2.ung.si/~tj0014/">Taj Jankovič</a>, <a href="https://www2.ung.si/~agomboc/ag/About_Me.html">Andreja Gomboc</a>, <a href="https://wyrzykow.wixsite.com/lukasz">Łukasz Wyrzykowsk </a>, Uroš Kostić, <a href="https://www2.ung.si/~tpetrushevska/">Tanja Petrushevska</a>, Mateusz Bronikowski, Maja Jabłonska, Zofia Kaczmarek, Martina Larma, Mile Karlica </p>
   <p align="center">
     <br />
      <!-- <a href="https://github.com/othneildrew/Best-README-Template"><strong>Explore the docs »</strong></a>  -->
